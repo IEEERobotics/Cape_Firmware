@@ -1,0 +1,390 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1718 ]
+[d frameptr 6 ]
+"116 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/i2c.c
+[e E6245 . `uc
+I2C_SLAVE_WRITE_REQUEST 0
+I2C_SLAVE_READ_REQUEST 1
+I2C_SLAVE_WRITE_COMPLETED 2
+I2C_SLAVE_READ_COMPLETED 3
+]
+"174
+[e E6266 . `uc
+SLAVE_NORMAL_DATA 0
+SLAVE_DATA_ADDRESS 1
+]
+"87 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/adc.c
+[e E6209 . `uc
+channel_DAC2_Output 28
+channel_Temp 29
+channel_DAC1_Output 30
+channel_FVRBuffer1 31
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_AN3 3
+channel_AN4 4
+channel_AN14 14
+channel_AN15 15
+channel_AN16 16
+channel_AN17 17
+channel_AN18 18
+]
+"7 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[e E6216 . `uc
+channel_DAC2_Output 28
+channel_Temp 29
+channel_DAC1_Output 30
+channel_FVRBuffer1 31
+channel_AN0 0
+channel_AN1 1
+channel_AN2 2
+channel_AN3 3
+channel_AN4 4
+channel_AN14 14
+channel_AN15 15
+channel_AN16 16
+channel_AN17 17
+channel_AN18 18
+]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"12 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[v _init_irRange init_irRange `(v  1 e 0 0 ]
+"23
+[v _readADCs readADCs `(v  1 e 0 0 ]
+"85
+[v _getADCReading getADCReading `(uc  1 e 1 0 ]
+"54 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\main.c
+[v _main main `(v  1 e 0 0 ]
+"65 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 0 0 ]
+"111
+[v _ADC_GetConversion ADC_GetConversion `(ui  1 e 2 0 ]
+"132
+[v _ADC_ISR ADC_ISR `(v  1 e 0 0 ]
+"82 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/i2c.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 0 0 ]
+"104
+[v _I2C_ISR I2C_ISR `(v  1 e 0 0 ]
+"160
+[v _I2C_StatusCallback I2C_StatusCallback `(v  1 e 0 0 ]
+"52 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+"72 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+"79
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+"51 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+[s S443 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1718.h
+[s S452 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S457 . 1 `S443 1 . 1 0 `S452 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES457  1 e 1 @11 ]
+[s S140 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"634
+[u S149 . 1 `S140 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES149  1 e 1 @17 ]
+"1100
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1161
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1222
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1283
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S161 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1320
+[u S170 . 1 `S161 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES170  1 e 1 @145 ]
+[s S33 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1498
+[s S40 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S47 . 1 `S33 1 . 1 0 `S40 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES47  1 e 1 @149 ]
+"1671
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1728
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1799
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @154 ]
+"1866
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1885
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1904
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S348 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+"1929
+[s S352 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S360 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S363 . 1 `S348 1 . 1 0 `S352 1 . 1 0 `S360 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES363  1 e 1 @157 ]
+"1983
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2035
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @159 ]
+"2082
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2143
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2204
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"3487
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3536
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3585
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"4654
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"4715
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"4776
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"4837
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"4857
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"5110
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"5363
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
+"5616
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S183 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"5638
+[u S192 . 1 `S183 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES192  1 e 1 @532 ]
+"5737
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S236 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5770
+[s S242 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S247 . 1 `S236 1 . 1 0 `S242 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES247  1 e 1 @533 ]
+"6006
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S204 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6028
+[u S213 . 1 `S204 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES213  1 e 1 @534 ]
+"6127
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @535 ]
+"9920
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3599 ]
+[s S67 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"9930
+[u S69 . 1 `S67 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES69  1 e 1 @3599 ]
+[s S74 . 1 `uc 1 SSPCLKPPS 1 0 :5:0 
+]
+"10082
+[u S76 . 1 `S74 1 . 1 0 ]
+[v _SSPCLKPPSbits SSPCLKPPSbits `VES76  1 e 1 @3616 ]
+[s S88 . 1 `uc 1 SSPDATPPS 1 0 :5:0 
+]
+"10101
+[u S90 . 1 `S88 1 . 1 0 ]
+[v _SSPDATPPSbits SSPDATPPSbits `VES90  1 e 1 @3617 ]
+[s S81 . 1 `uc 1 RC0PPS 1 0 :5:0 
+]
+"10557
+[u S83 . 1 `S81 1 . 1 0 ]
+[v _RC0PPSbits RC0PPSbits `VES83  1 e 1 @3744 ]
+[s S95 . 1 `uc 1 RC1PPS 1 0 :5:0 
+]
+"10576
+[u S97 . 1 `S95 1 . 1 0 ]
+[v _RC1PPSbits RC1PPSbits `VES97  1 e 1 @3745 ]
+"15579
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"4 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[v _adc_readings adc_readings `[10]ui  1 e 20 0 ]
+"5
+[v _adc_readings_ptr adc_readings_ptr `*.4ui  1 e 1 0 ]
+"6
+[v _i2cread_ptr i2cread_ptr `*.4uc  1 e 1 0 ]
+"7
+[v _adc_state adc_state `E6216  1 e 1 0 ]
+"50 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\main.c
+[v _debug debug `i  1 e 2 0 ]
+"63 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/i2c.c
+[v _I2C_slaveWriteData I2C_slaveWriteData `VEuc  1 e 1 0 ]
+"157
+[v _Command Command `uc  1 e 1 0 ]
+"54 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"82
+} 0
+"23 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[v _readADCs readADCs `(v  1 e 0 0 ]
+{
+"83
+} 0
+"111 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(ui  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E6209  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E6209  1 a 1 wreg ]
+"113
+[v ADC_GetConversion@channel channel `E6209  1 a 1 3 ]
+"130
+} 0
+"12 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[v _init_irRange init_irRange `(v  1 e 0 0 ]
+{
+"13
+[v init_irRange@i i `i  1 a 2 1 ]
+"20
+} 0
+"72 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 0 0 ]
+{
+"77
+} 0
+"51 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 0 0 ]
+{
+"73
+[v PIN_MANAGER_Initialize@state state `uc  1 a 1 0 ]
+"87
+} 0
+"79 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 0 0 ]
+{
+"88
+} 0
+"82 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/i2c.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 0 0 ]
+{
+"102
+} 0
+"65 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 0 0 ]
+{
+"85
+} 0
+"52 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 0 0 ]
+{
+"61
+} 0
+"104 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/i2c.c
+[v _I2C_ISR I2C_ISR `(v  1 e 0 0 ]
+{
+"105
+[v I2C_ISR@i2c_data i2c_data `uc  1 a 1 6 ]
+"135
+} 0
+"160
+[v _I2C_StatusCallback I2C_StatusCallback `(v  1 e 0 0 ]
+{
+[v I2C_StatusCallback@i2c_bus_state i2c_bus_state `E6245  1 a 1 wreg ]
+[v I2C_StatusCallback@i2c_bus_state i2c_bus_state `E6245  1 a 1 wreg ]
+"162
+[v I2C_StatusCallback@EEPROM_Buffer EEPROM_Buffer `[128]uc  1 s 128 EEPROM_Buffer ]
+"173
+[v I2C_StatusCallback@eepromAddress eepromAddress `uc  1 s 1 eepromAddress ]
+"174
+[v I2C_StatusCallback@slaveWriteType slaveWriteType `uc  1 s 1 slaveWriteType ]
+"160
+[v I2C_StatusCallback@i2c_bus_state i2c_bus_state `E6245  1 a 1 4 ]
+"234
+} 0
+"85 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\irRange.c
+[v _getADCReading getADCReading `(uc  1 e 1 0 ]
+{
+"87
+[v getADCReading@temp temp `uc  1 a 1 1 ]
+"95
+} 0
+"132 C:\Users\Sean\Desktop\PIC-CODE-master\irRangeAnalog.X\mcc_generated_files/adc.c
+[v _ADC_ISR ADC_ISR `(v  1 e 0 0 ]
+{
+"135
+} 0
