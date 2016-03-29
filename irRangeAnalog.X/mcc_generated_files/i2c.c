@@ -61,7 +61,7 @@ typedef enum {
  */
 
 volatile uint8_t I2C_slaveWriteData = 0x55;
-
+extern int ResetCommand = 0; 
 
 extern int debug;
 /**
@@ -201,7 +201,7 @@ void I2C_StatusCallback(I2C_SLAVE_DRIVER_STATUS i2c_bus_state) {
                     Command = I2C_slaveWriteData;
                          
                     if(Command == 0xA5){
-                        asm("RESET"); 
+                        ResetCommand = 1; 
                         }
                     
                     
@@ -219,8 +219,8 @@ void I2C_StatusCallback(I2C_SLAVE_DRIVER_STATUS i2c_bus_state) {
 
         case I2C_SLAVE_READ_REQUEST:
             debug = 3; 
-            getADCReading();
-            SSP1BUF = i2cread_ptr;//getADCReading();//EEPROM_Buffer[eepromAddress++];
+            
+            SSP1BUF = getADCReading();//EEPROM_Buffer[eepromAddress++];
            // if (sizeof (EEPROM_Buffer) <= eepromAddress) {
            //     eepromAddress = 0; // wrap to start of eeprom page
           //  }

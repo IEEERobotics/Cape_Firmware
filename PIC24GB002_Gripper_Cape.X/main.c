@@ -51,6 +51,8 @@ void debounce(int cycles);
 void grab();
 void letGo();
 void ResetMemory();
+void TurnOnLight();
+void TurnOffLight(); 
 
 //================================================Global Variables
 
@@ -65,7 +67,8 @@ int i = 0;
 int main(void) {
     // initialize the device
     SYSTEM_Initialize();
-
+    TurnOffLight();
+    
     while (1) {
         // Add your application code
     
@@ -73,10 +76,14 @@ int main(void) {
         if(TransmitComplete){
             TransmitComplete = 0; 
             switch(LocalMemory[0]){
-                    case 5: grab();
-                        break;
-                    case 6: letGo();
-                        break;
+                case 3: TurnOnLight();
+                    break;
+                case 4: TurnOffLight();
+                    break;
+                case 5: grab();
+                    break;
+                case 6: letGo();
+                    break;
             }
             ResetMemory();
         }
@@ -115,7 +122,7 @@ int main(void) {
 
 void letGo(){
     
-    while(OC1R < 0x400){
+    while(OC1R < 0x450){
         OC1R+= 0x10; 
         debounce(1);
     }
@@ -137,6 +144,13 @@ void ResetMemory(){
     ResetIndex = 0;
 }
 
+void TurnOnLight(){
+    LATBbits.LATB11 = 1; 
+}
+
+void TurnOffLight(){
+    LATBbits.LATB11 = 0; 
+}
 void debounce(int cycles){
     
     TimerVariable = 0;

@@ -64,7 +64,7 @@ void PIN_MANAGER_Initialize(void) {
      * Setting the GPIO of PORTB
      ***************************************************************************/
     LATB = 0x00;
-    TRISB = 0xEB1F;
+    TRISB = 0xE31F;
 
     /****************************************************************************
      * Setting the Analog/Digital Configuration SFR

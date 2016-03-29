@@ -1222,6 +1222,152 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
  */
 #define IO_RB7_SetDigitalOutput() _TRISB7 = 0
+/**
+  @Summary
+    Sets the GPIO pin, RB11, high using LATB11.
+
+  @Description
+    Sets the GPIO pin, RB11, high using LATB11.
+
+  @Preconditions
+    The RB11 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB11 high (1)
+    IO_RB11_SetHigh();
+    </code>
+
+ */
+#define IO_RB11_SetHigh()          _LATB11 = 1
+/**
+  @Summary
+    Sets the GPIO pin, RB11, low using LATB11.
+
+  @Description
+    Sets the GPIO pin, RB11, low using LATB11.
+
+  @Preconditions
+    The RB11 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RB11 low (0)
+    IO_RB11_SetLow();
+    </code>
+
+ */
+#define IO_RB11_SetLow()           _LATB11 = 0
+/**
+  @Summary
+    Toggles the GPIO pin, RB11, using LATB11.
+
+  @Description
+    Toggles the GPIO pin, RB11, using LATB11.
+
+  @Preconditions
+    The RB11 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RB11
+    IO_RB11_SetToggle();
+    </code>
+
+ */
+#define IO_RB11_Toggle()           _LATB11 ^= 1
+/**
+  @Summary
+    Reads the value of the GPIO pin, RB11.
+
+  @Description
+    Reads the value of the GPIO pin, RB11.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RB11
+    postValue = IO_RB11_GetValue();
+    </code>
+
+ */
+#define IO_RB11_GetValue()         _RB11
+/**
+  @Summary
+    Configures the GPIO pin, RB11, as an input.
+
+  @Description
+    Configures the GPIO pin, RB11, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB11 as an input
+    IO_RB11_SetDigitalInput();
+    </code>
+
+ */
+#define IO_RB11_SetDigitalInput()  _TRISB11 = 1
+/**
+  @Summary
+    Configures the GPIO pin, RB11, as an output.
+
+  @Description
+    Configures the GPIO pin, RB11, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RB11 as an output
+    IO_RB11_SetDigitalOutput();
+    </code>
+
+ */
+#define IO_RB11_SetDigitalOutput() _TRISB11 = 0
 
 /**
     Section: Function Prototypes

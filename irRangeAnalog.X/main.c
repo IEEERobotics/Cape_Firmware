@@ -48,6 +48,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "irRange.h"
 
 int debug = 0;
+int ResetCommand = 0;
 /*
                          Main application
  */
@@ -76,7 +77,8 @@ void main(void) {
         
         
         
-        
+        if(ResetCommand)
+            asm("RESET");
         
     }
 }

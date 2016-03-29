@@ -63,11 +63,11 @@ Program Memory  [Origin = 0x200, Length = 0xa9f8]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200                0x9e            0xed  (237)
-.text                        0x29e               0x800           0xc00  (3072)
-.dinit                       0xa9e                0x62            0x93  (147)
-.text                        0xb00                0x7c            0xba  (186)
+.text                        0x29e               0x828           0xc3c  (3132)
+.dinit                       0xac6                0x62            0x93  (147)
+.text                        0xb28                0x7c            0xba  (186)
 
-                     Total program memory used (bytes):          0xe3a  (3642) 5%
+                     Total program memory used (bytes):          0xe76  (3702) 5%
 
 
 Data Memory  [Origin = 0x800, Length = 0x2000]
@@ -206,14 +206,16 @@ External Symbols in Program Memory (by address):
                   0x0009b0                  _TMR2_SoftwareCounterClear
                   0x0009bc                  _DRV_TMR2_SoftwareCounterClear
                   0x0009c4                  _main
-                  0x000a34                  _letGo
-                  0x000a4e                  _grab
-                  0x000a6c                  _ResetMemory
-                  0x000a8c                  _debounce
-                  0x000b00                  _PIN_MANAGER_Initialize
-                  0x000b44                  _SYSTEM_Initialize
-                  0x000b58                  _OSCILLATOR_Initialize
-                  0x000b62                  _INTERRUPT_Initialize
+                  0x000a4c                  _letGo
+                  0x000a66                  _grab
+                  0x000a84                  _ResetMemory
+                  0x000aa4                  _TurnOnLight
+                  0x000aac                  _TurnOffLight
+                  0x000ab4                  _debounce
+                  0x000b28                  _PIN_MANAGER_Initialize
+                  0x000b6c                  _SYSTEM_Initialize
+                  0x000b80                  _OSCILLATOR_Initialize
+                  0x000b8a                  _INTERRUPT_Initialize
 
 External Symbols in Program Memory (by name):
 
@@ -268,7 +270,7 @@ External Symbols in Program Memory (by name):
                   0x0004de                  _I2C2_TransmitProcess
                   0x00048e                  _I2C2_WritePointerGet
                   0x000466                  _I2C2_WritePointerSet
-                  0x000b62                  _INTERRUPT_Initialize
+                  0x000b8a                  _INTERRUPT_Initialize
                   0x000660                  _OC1_CentreAlignedPWMConfig
                   0x00063e                  _OC1_DualCompareValueSet
                   0x000682                  _OC1_EdgeAlignedPWMConfig
@@ -283,10 +285,10 @@ External Symbols in Program Memory (by name):
                   0x0005d4                  _OC1_Tasks
                   0x00077e                  _OC1_TriggerStatusClear
                   0x00075e                  _OC1_TriggerStatusGet
-                  0x000b58                  _OSCILLATOR_Initialize
-                  0x000b00                  _PIN_MANAGER_Initialize
-                  0x000a6c                  _ResetMemory
-                  0x000b44                  _SYSTEM_Initialize
+                  0x000b80                  _OSCILLATOR_Initialize
+                  0x000b28                  _PIN_MANAGER_Initialize
+                  0x000a84                  _ResetMemory
+                  0x000b6c                  _SYSTEM_Initialize
                   0x00083a                  _TMR1_CallBack
                   0x00082a                  _TMR1_Counter16BitGet
                   0x00080c                  _TMR1_Counter16BitSet
@@ -309,6 +311,8 @@ External Symbols in Program Memory (by name):
                   0x000958                  _TMR2_Start
                   0x00096e                  _TMR2_Stop
                   0x0008d2                  _TMR2_Tasks_16BitOperation
+                  0x000aac                  _TurnOffLight
+                  0x000aa4                  _TurnOnLight
                   0x00029a                  __DefaultInterrupt
                   0x0002c8                  __SI2C2Interrupt
                   0x0007b0                  __T1Interrupt
@@ -316,9 +320,9 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __data_init_standard
                   0x00022c                  __psv_init
                   0x000200                  __resetPRI
-                  0x000a8c                  _debounce
-                  0x000a4e                  _grab
-                  0x000a34                  _letGo
+                  0x000ab4                  _debounce
+                  0x000a66                  _grab
+                  0x000a4c                  _letGo
                   0x0009c4                  _main
 
 Memory Configuration
@@ -404,16 +408,16 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3ac5
+.debug_info       0x000000       0x3bc7
  *(.debug_info)
- .debug_info      0x000000        0x347 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x000347        0x1d4 build/default/production/mcc_generated_files/mcc.o
- .debug_info      0x00051b        0xd31 build/default/production/mcc_generated_files/i2c2.o
- .debug_info      0x00124c        0x4d0 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x00171c        0x98d build/default/production/mcc_generated_files/tmr1.o
- .debug_info      0x0020a9        0xd33 build/default/production/mcc_generated_files/oc1.o
- .debug_info      0x002ddc        0x841 build/default/production/mcc_generated_files/tmr2.o
- .debug_info      0x00361d        0x4a8 build/default/production/main.o
+ .debug_info      0x000000        0x334 build/default/production/mcc_generated_files/pin_manager.o
+ .debug_info      0x000334        0x1c1 build/default/production/mcc_generated_files/mcc.o
+ .debug_info      0x0004f5        0xd1e build/default/production/mcc_generated_files/i2c2.o
+ .debug_info      0x001213        0x4bd build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0016d0        0x97a build/default/production/mcc_generated_files/tmr1.o
+ .debug_info      0x00204a        0xd20 build/default/production/mcc_generated_files/oc1.o
+ .debug_info      0x002d6a        0x82e build/default/production/mcc_generated_files/tmr2.o
+ .debug_info      0x003598        0x62f build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x93a
@@ -427,7 +431,7 @@ __CONFIG1
  .debug_abbrev    0x00068d        0x16e build/default/production/mcc_generated_files/tmr2.o
  .debug_abbrev    0x0007fb        0x13f build/default/production/main.o
 
-.debug_line       0x000000       0x1b07
+.debug_line       0x000000       0x1b73
  *(.debug_line)
  .debug_line      0x000000        0x100 build/default/production/mcc_generated_files/pin_manager.o
  .debug_line      0x000100        0x112 build/default/production/mcc_generated_files/mcc.o
@@ -436,9 +440,9 @@ __CONFIG1
  .debug_line      0x000a28        0x469 build/default/production/mcc_generated_files/tmr1.o
  .debug_line      0x000e91        0x561 build/default/production/mcc_generated_files/oc1.o
  .debug_line      0x0013f2        0x443 build/default/production/mcc_generated_files/tmr2.o
- .debug_line      0x001835        0x2d2 build/default/production/main.o
+ .debug_line      0x001835        0x33e build/default/production/main.o
 
-.debug_frame      0x000000        0x6c0
+.debug_frame      0x000000        0x6e0
  *(.debug_frame)
  .debug_frame     0x000000         0x24 build/default/production/mcc_generated_files/pin_manager.o
  .debug_frame     0x000024         0x34 build/default/production/mcc_generated_files/mcc.o
@@ -447,9 +451,9 @@ __CONFIG1
  .debug_frame     0x0001b0        0x174 build/default/production/mcc_generated_files/tmr1.o
  .debug_frame     0x000324        0x1c4 build/default/production/mcc_generated_files/oc1.o
  .debug_frame     0x0004e8        0x174 build/default/production/mcc_generated_files/tmr2.o
- .debug_frame     0x00065c         0x64 build/default/production/main.o
+ .debug_frame     0x00065c         0x84 build/default/production/main.o
 
-.debug_str        0x000000        0x136
+.debug_str        0x000000        0x13f
  *(.debug_str)
  .debug_str       0x000000          0xa build/default/production/mcc_generated_files/pin_manager.o
  .debug_str       0x00000a         0x59 build/default/production/mcc_generated_files/i2c2.o
@@ -457,7 +461,7 @@ __CONFIG1
  .debug_str       0x000076         0x30 build/default/production/mcc_generated_files/tmr1.o
  .debug_str       0x0000a6         0x38 build/default/production/mcc_generated_files/oc1.o
  .debug_str       0x0000de         0x19 build/default/production/mcc_generated_files/tmr2.o
- .debug_str       0x0000f7         0x3f build/default/production/main.o
+ .debug_str       0x0000f7         0x48 build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -466,7 +470,7 @@ __CONFIG1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0xa58
+                  0x000000        0xa79
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x2d build/default/production/mcc_generated_files/pin_manager.o
@@ -483,7 +487,7 @@ __CONFIG1
  .debug_pubnames
                   0x000777        0x24e build/default/production/mcc_generated_files/tmr2.o
  .debug_pubnames
-                  0x0009c5         0x93 build/default/production/main.o
+                  0x0009c5         0xb4 build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1591,7 +1595,7 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0000c0        0x39b
+                  0x0000c0        0x3b8
  .debug_pubtypes
                   0x0000c0         0x31 build/default/production/mcc_generated_files/pin_manager.o
  .debug_pubtypes
@@ -1607,30 +1611,30 @@ LOAD data_init
  .debug_pubtypes
                   0x000378         0x87 build/default/production/mcc_generated_files/tmr2.o
  .debug_pubtypes
-                  0x0003ff         0x5c build/default/production/main.o
+                  0x0003ff         0x79 build/default/production/main.o
 
 __c30_signature
-                  0x00045b         0x3c
+                  0x000478         0x3c
  __c30_signature
-                  0x00045b          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000478          0x6 build/default/production/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000461          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x00047e          0x6 build/default/production/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000467          0x6 build/default/production/mcc_generated_files/i2c2.o
+                  0x000484          0x6 build/default/production/mcc_generated_files/i2c2.o
  __c30_signature
-                  0x00046d          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00048a          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000473          0x6 build/default/production/mcc_generated_files/tmr1.o
+                  0x000490          0x6 build/default/production/mcc_generated_files/tmr1.o
  __c30_signature
-                  0x000479          0x6 build/default/production/mcc_generated_files/oc1.o
+                  0x000496          0x6 build/default/production/mcc_generated_files/oc1.o
  __c30_signature
-                  0x00047f          0x6 build/default/production/mcc_generated_files/tmr2.o
+                  0x00049c          0x6 build/default/production/mcc_generated_files/tmr2.o
  __c30_signature
-                  0x000485          0x6 build/default/production/main.o
+                  0x0004a2          0x6 build/default/production/main.o
  __c30_signature
-                  0x00048b          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x0004a8          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000491          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x0004ae          0x6 c:/program files (x86)/microchip/xc16/v1.25/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
 
 .nbss               0x0800         0x14
  .nbss              0x0800          0xc build/default/production/mcc_generated_files/i2c2.o
@@ -1670,7 +1674,7 @@ __c30_signature
  .config_DSWDTEN
                   0x00abf8          0x2 build/default/production/mcc_generated_files/mcc.o
 
-.text             0x00029e        0x800
+.text             0x00029e        0x828
  .text            0x00029e        0x30e build/default/production/mcc_generated_files/i2c2.o
                   0x00029e                  _I2C2_Initialize
                   0x0002c0                  _DRV_I2C2_Initialize
@@ -1764,21 +1768,23 @@ __c30_signature
                   0x0009a8                  _DRV_TMR2_SoftwareCounterGet
                   0x0009b0                  _TMR2_SoftwareCounterClear
                   0x0009bc                  _DRV_TMR2_SoftwareCounterClear
- .text            0x0009c4         0xda build/default/production/main.o
+ .text            0x0009c4        0x102 build/default/production/main.o
                   0x0009c4                  _main
-                  0x000a34                  _letGo
-                  0x000a4e                  _grab
-                  0x000a6c                  _ResetMemory
-                  0x000a8c                  _debounce
+                  0x000a4c                  _letGo
+                  0x000a66                  _grab
+                  0x000a84                  _ResetMemory
+                  0x000aa4                  _TurnOnLight
+                  0x000aac                  _TurnOffLight
+                  0x000ab4                  _debounce
 
-.dinit            0x000a9e         0x62
- .dinit           0x000a9e         0x62 data_init
+.dinit            0x000ac6         0x62
+ .dinit           0x000ac6         0x62 data_init
 
-.text             0x000b00         0x7c
- .text            0x000b00         0x44 build/default/production/mcc_generated_files/pin_manager.o
-                  0x000b00                  _PIN_MANAGER_Initialize
- .text            0x000b44         0x1e build/default/production/mcc_generated_files/mcc.o
-                  0x000b44                  _SYSTEM_Initialize
-                  0x000b58                  _OSCILLATOR_Initialize
- .text            0x000b62         0x1a build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000b62                  _INTERRUPT_Initialize
+.text             0x000b28         0x7c
+ .text            0x000b28         0x44 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000b28                  _PIN_MANAGER_Initialize
+ .text            0x000b6c         0x1e build/default/production/mcc_generated_files/mcc.o
+                  0x000b6c                  _SYSTEM_Initialize
+                  0x000b80                  _OSCILLATOR_Initialize
+ .text            0x000b8a         0x1a build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000b8a                  _INTERRUPT_Initialize

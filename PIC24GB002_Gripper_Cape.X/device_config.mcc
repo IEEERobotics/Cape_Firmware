@@ -13,8 +13,9 @@
             <resource customName="IO_RB5" digital="true" direction="OUTPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
             <resource customName="IO_RB7" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
             <resource customName="" digital="true" direction="OUTPUT" function="OC1" ioc="0" module="OC1" name="RB10" start="false" type="pin" wpu="false"/>
-            <file checksum="1689485604" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
-            <file checksum="3721712256" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
+            <resource customName="IO_RB11" digital="true" direction="OUTPUT" function="RB11" ioc="0" module="GPIO" name="RB11" start="false" type="pin" wpu="false"/>
+            <file checksum="1096712469" modified="false" name="pin_manager.c" path="mcc_generated_files/pin_manager.c"/>
+            <file checksum="4091225359" modified="false" name="pin_manager.h" path="mcc_generated_files/pin_manager.h"/>
         </manager>
         <manager generated="true" name="System" reloadPin="manual">
             <initializer comment="" name="Initialize">
@@ -75,6 +76,7 @@
             <resource customName="IO_RA3" digital="true" direction="OUTPUT" function="RA3" ioc="0" module="GPIO" name="RA3" start="false" type="pin" wpu="false"/>
             <resource customName="IO_RB7" digital="true" direction="OUTPUT" function="RB7" ioc="0" module="GPIO" name="RB7" start="false" type="pin" wpu="false"/>
             <resource customName="IO_RB5" digital="true" direction="OUTPUT" function="RB5" ioc="0" module="GPIO" name="RB5" start="false" type="pin" wpu="false"/>
+            <resource customName="IO_RB11" digital="true" direction="OUTPUT" function="RB11" ioc="0" module="GPIO" name="RB11" start="false" type="pin" wpu="false"/>
         </module>
         <module generated="true" mode="I2C Slave" name="I2C2" order="1" reloadPin="auto" type="i2c">
             <initializer comment="" name="Initialize">
